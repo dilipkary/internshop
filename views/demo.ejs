@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div id="demo" name="demo"></div>
+    <form action="/searching" method="post">
+        <input type="search" required name="search_web"  id="search_web">
+    </form>
+    <div id="demo" name="demo">
+    <%
+    function isEmpty(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;}
+        return true;}
+    var list=[];
+    function getList(item) {
+        var items = ('<h1>'+item.image_link+'</h1><h2>'+item.brand_name+'</h2>'+
+                '<h2>'+item.price+'</h2><h2>'+item.desc+'</h2>');
+        return items;}
+    if(isEmpty(data)){%>
+        <div><h2>Search items from various websites</h2></div><%}
+    else {%>
+        <%-data.map(getList)%>
+    <%}
+ %></div>
+
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#searchform').keydown(function(e) {
+            var key = e.which;
+            var val=$("")
+            if (key == 13) {
+                alert("hello");
+                $.post("/",
+                    $('#search_web').val(),
+                    function(data, status){
+                        $('#search-result').html(data);
+                    });
+            }
+        });
+    });
+    /* function submitForm() {
+       document.searchform.submit();
+       document.searchform.method='post';
+       document.searchform.action='/';
+     }
+     document.onkeydown = function () {
+       if (window.event.keyCode == '13') {
+         submitForm();
+       }
+     }*/
+    //document.getElementById("search_web").onclick = submitForm;
+</script>
+</body>
+</html>

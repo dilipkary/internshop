@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <% include ./partials/cssInclude %>
+</head>
+<body>
+<!-- header start-->
+    <header>
+        <% include ./partials/header %>
+    </header>
+<!--header end -->
+<main role="main">
+    <% include ./partials/searchBar %>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <% include ./partials/itemListing%>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="text-muted">
+    <% include ./partials/footer%>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

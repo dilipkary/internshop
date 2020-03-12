@@ -1,0 +1,120 @@
+.navcolor {
+    background-color: white !important;
+}
+.head-text-color{
+    color: crimson !important;
+}
+
+.searchbox-center{
+    margin-left: 30% !important;
+    margin-right: 30% !important;
+    padding-left: 30% !important;
+    padding-right: 30% !important;
+
+}
+
+.center-block {
+    margin: auto;
+    display: block;
+  }
+
+
+.box-input{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #76D7C4 ;
+    padding: 14px 10px;
+    width: 30%;
+    outline: none;
+    color: black;
+    background-color: white;
+    border-radius: 24px;
+    
+  }
+  .box-input:focus{
+    width: 50%;
+    border-color: #2ecc71;
+  }
+  .box-button{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box-button{
+    background: #2ecc71;
+  }
+  
+  .no-border-radius{
+      border-radius: 0%;
+  }
+
+  .margin-item-list-box{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+  }
+
+  .img-width{
+    width: -webkit-fill-available;
+  }
+
+.search-icon-set{
+    position: absolute;
+    top: 222px;
+    left: 39.80%;
+  }
+
+ .box-input:focus + .search-icon-set{
+    left: 32.80%;
+   
+  }
+
+  .product-name{
+        color: #535766;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+        font-weight: 400;
+        display: block;
+  }
+
+  .product-brand {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ .navbar-height{
+     height: 70px;
+ }
+.product-price {
+    font-size: 14px;
+    color: #282c3f;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 10px 0 6px;
+    white-space: nowrap;
+}
+
+.no-border{
+    border: 0px solid;
+}
